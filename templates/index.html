@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction</title>
+</head>
+
+<body>
+
+    <div>
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Titanic Prediction</h2>
+            <h3>Age</h3>
+            <input id="first" name="Age" type="number" required="required">
+            <h3>What is the Ticket Fare</h3>
+            <input id="second" name="Fare" required="required">
+            <h3>How Many Siblings/Spouse(0-8)?</h3>
+            <input id="third" name="Siblings" required="required">
+            <h3>How Many Parents and Child(0-8)?</h3>
+            <input id="fourth" name="Parents" required="required">
+            <h3>What is the Passenger Class?</h3>
+            <select name="Passenger_Class" id="passenger" required="required">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <h3>What is the Gender</h3>
+            <select name="Gender" id="resea" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <h3>From where was the journey embarked?</h3>
+            <select name="Embarked" id="research" required="required">
+                <option value="Southampton">Southampton</option>
+                <option value="Cherbourg">Cherbourg</option>
+                <option value="Queenstown">Queenstown</option>
+            </select>
+            <br><br><br><br><button id="sub" type="submit "><b>Will the Passenger Survive?</b></button>
+            <br>
+        </form>
+
+
+
+        <br><br><h3 id="prediction">{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+    
+        h2{
+            font-family: Verdana;
+            color: #FF6800;
+        }
+        
+        h3{
+            font-family: Verdana;
+            color: #F1902F;
+        }
+        
+        body {
+            background-color: #BFBEBE;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #passenger {
+            width: 150px;
+            height: 34px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        
+        #passenger:hover {
+            background-color: #BDC7AD;
+        }
+        
+        #research {
+            width: 150px;
+            height: 34px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: #BDC7AD;
+        }
+        
+        #resea {
+            width: 150px;
+            height: 34px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: #BDC7AD;
+        }
+        
+        #sub {
+            width: 260px;
+            height: 45px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+            background-color: #169C09;
+        }
+        
+        #sub:hover {
+            background-color: Green;
+        }
+
+        
+        #first {
+            border-radius: 8px;
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 8px;
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 8px;
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 8px;
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+     
+        
+    </style>
+</body>
+
+</html>
